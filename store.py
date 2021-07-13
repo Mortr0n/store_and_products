@@ -1,3 +1,4 @@
+from product import Product
 class Store:
     def __init__(self, name):
         self.name = name
@@ -14,16 +15,16 @@ class Store:
         self.percent_increase = percent_increase * .001
         
     
-    def set_clearance(self, category, percent_discount):
+    # def set_clearance(self, category, percent_discount):
         
 
 
-new_store = Store("Albertsons")
-new_store.add_product("TV")
-new_store.add_product("Blender")
-print(new_store.product_list)
-new_store.sell_product(1)
-print(new_store.product_list)
-for i in new_store.product_list:
-    print(id(i))
+# new_store = Store("Albertsons")
+# new_store.add_product("TV")
+# new_store.add_product("Blender")
+# print(new_store.product_list)
+# new_store.sell_product(1)
+# print(new_store.product_list)
+# for i in new_store.product_list:
+#     print(id(i))
   
