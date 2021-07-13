@@ -25,4 +25,4 @@ class Product:
         
 
 product1 = Product("Super Slicer 3000", 250, "Small Appliances")
-product1.print_info()
+product1.print_info() 
