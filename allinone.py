@@ -8,7 +8,7 @@ class Store:
         return self
     
     def inflation(self, percent_increase):
-        
+        Product.update_price(percent_change=percent_increase, is_increased=True)
     
     def set_clearance(self, category, percent_discount):
         self.category = category
@@ -19,10 +19,10 @@ class Product:
         self.name = name
         self.price = price
         self.category = category
-        return self
+        
     
     def update_price (self, percent_change, is_increased):
-        self.percent_change = percent_change
+        self.percent_change = percent_change * .01
         self.is_increased = is_increased
         
         if(self.is_increased == True):
@@ -42,5 +42,8 @@ store1 = Store("Fresh Market")
 print(product1.name)
 store1.add_product(product1)
 store1.add_product(blender1)
+print(store1.product_list)
+store1.inflation(10)
+
 
 print(store1.product_list)
