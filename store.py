@@ -13,18 +13,21 @@ class Store:
         
     def inflation(self, percent_increase):
         self.percent_increase = percent_increase * .001
-        
     
-    # def set_clearance(self, category, percent_discount):
+    def set_clearance(self, category, percent_discount):
+        self.category = category
+        self.percent_discount = percent_discount * .01
+        
+        
         
 
 
-# new_store = Store("Albertsons")
-# new_store.add_product("TV")
-# new_store.add_product("Blender")
-# print(new_store.product_list)
+new_store = Store("Albertsons")
+new_store.add_product("TV")
+new_store.add_product("Blender")
+print(new_store.product_list)
 # new_store.sell_product(1)
-# print(new_store.product_list)
-# for i in new_store.product_list:
-#     print(id(i))
+print(new_store.product_list)
+for i in new_store.product_list:
+    print(id(i))
   
