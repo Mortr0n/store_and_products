@@ -1,4 +1,4 @@
-from store import Store
+import store
 
 
 class Product:

@@ -1,4 +1,6 @@
-from product import Product
+import product
+
+
 class Store:
     def __init__(self, name):
         self.name = name
@@ -8,6 +10,8 @@ class Store:
         self.product_list.append(new_product)
         
     def sell_product(self, id):
+        print(self.product_list[id])
+        print(self.product_list[1])
         print(f"Removing {self.product_list[id]}")
         self.product_list.remove(self.product_list[id])
         

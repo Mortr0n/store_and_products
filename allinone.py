@@ -26,7 +26,9 @@ class Product:
         self.is_increased = is_increased
         
         if(self.is_increased == True):
+            print(self.price)
             self.price += (self.price * self.percent_change)
+            print(self.price)
             
         return self
     
@@ -43,7 +45,8 @@ print(product1.name)
 store1.add_product(product1)
 store1.add_product(blender1)
 print(store1.product_list)
-store1.inflation(10)
+blender1.update_price(20, True)
+
 
 
 print(store1.product_list)
